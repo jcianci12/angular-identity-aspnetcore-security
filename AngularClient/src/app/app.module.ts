@@ -8,16 +8,16 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { JwtModule } from "@auth0/angular-jwt";
-import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login'; 
+import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
- 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
- 
+
 export function tokenGetter() {
   return localStorage.getItem("token");
 }
@@ -69,7 +69,7 @@ export function tokenGetter() {
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '465156464629-1bsjrh3ujigm0aksldsjofqe8svahtgt.apps.googleusercontent.com', {
+              '787041522439-rjkm2864v9mbdogmpajg5so80gdq56jk.apps.googleusercontent.com', {
                 scope: 'email',
                 plugin_name: 'LoginProject'
               }
