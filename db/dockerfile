@@ -1,0 +1,15 @@
+# Use the official SQL Server Express Docker image from Microsoft
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+# Set environment variables for SQL Server Express
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=YourStrong!Passw0rd
+
+# Create a new database named CompanyEmployees
+ENV MSSQL_DB_NAME=CompanyEmployees
+
+# Copy a script file to initialize the database
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# Expose the SQL Server port
+EXPOSE 1433
